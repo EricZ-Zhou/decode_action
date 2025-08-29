@@ -1,6 +1,12 @@
 name: Decode JavaScript File
 
 on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        options: [staging, production]
+        default: staging
   push:
     branches:
       - main
